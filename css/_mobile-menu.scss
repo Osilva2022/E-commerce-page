@@ -1,0 +1,39 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  background-color: rgba($black, 0.75);
+  z-index: 5;
+  .mobile-menu-wrapper {
+    position: absolute;
+    left: -50vw;
+    width: 50vw;
+    height: 100vh;
+    background: $light-gray-100;
+    overflow: hidden;
+    button {
+      background: transparent;
+      border: none;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+      margin: 2em;
+      cursor: pointer;
+    }
+    ul {
+      padding: 2em;
+      list-style-type: none;
+      li {
+        padding: 0.5em 0;
+      }
+      li a {
+        font-size: 1.2em;
+        font-weight: 700;
+        text-decoration: none;
+        color: $gray-500;
+      }
+    }
+  }
+}

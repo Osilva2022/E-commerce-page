@@ -1,0 +1,109 @@
+/* Main Slider and thumbnails */
+.swiper-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      cursor: pointer;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .swiper-btn-prev,
+  .swiper-btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3em;
+    height: 3em;
+    z-index: 5;
+    border-radius: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    @media (min-width: 700px) {
+      display: none;
+    }
+  }
+  .swiper-button-disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+  .swiper-btn-prev {
+    left: 1em;
+  }
+  .swiper-btn-next {
+    right: 1em;
+  }
+  .main-slider {
+    @media (min-width: 700px) {
+      border-radius: 1em;
+    }
+  }
+  #main-thumbs-slider {
+    display: none;
+    @media (min-width: 700px) {
+      display: block;
+    }
+  }
+  .thumbs-slider {
+    height: 25%;
+    padding: 1em;
+    .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 1;
+      border-radius: 0.5em;
+      overflow: hidden;
+      img {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+      &:hover {
+        cursor: pointer;
+        img {
+          opacity: 0.5;
+        }
+      }
+    }
+    .swiper-slide-thumb-active {
+      border: 3px solid $orange;
+      img {
+        opacity: 0.5;
+      }
+    }
+  }
+}

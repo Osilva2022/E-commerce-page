@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1"/>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>E-commerce page</title>
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container navigation">
+        <div class="header-left">
+          <a href="#" id="mobile-nav-open" class="nav-toggle" loading="eager"> 
+            <img src="images/icon-menu.svg" alt="Toggle mobile menu" />
+          </a>
+          <a href="#" class="logo">sneakers</a>
+          <nav>
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+        </div>
+        <div class="header-right">
+          <div class="cart-dropdown">
+            <a href="#" class="cart-dropdown-btn" id="cart-dropdown-toggle"
+              ><img
+                src="./images/icon-cart.svg"
+                alt="Cart Dropdown Toggle"
+              /><span id="cart-qty-tooltip">0</span></a
+            >
+            <div class="cart" id="header-cart-wrapper" data-visible="0">
+              <h3 class="heading">Cart</h3>
+              <div class="cart-content">
+                <h3 class="cart-empty">Your cart is empty.</h3>         
+              </div>
+              <button class="checkout">Checkout</button>
+            </div>
+          </div>
+          <a href="#" class="user-avatar"
+            ><img src="./images/image-avatar.png" alt="User Avatar"  loading="eager"
+          /></a>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" data-visible="0">
+      <div class="mobile-menu-wrapper">
+        <button id="mobile-nav-close">
+          <img src="./images/icon-close.svg" alt="Mobile Menu Close Button" />
+        </button>
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main>
+      <div class="swiper-container">
+        <div class="swiper main-slider" id="main-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/image-product-1.jpg" alt="image-product-1" loading="lazy"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-2.jpg" alt="image-product-2" loading="lazy"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-3.jpg" alt="image-product-3" loading="lazy"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-4.jpg" alt="image-product-4" loading="lazy"/>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-btn-next" id="main-slider-next">
+          <img src="./images/icon-next.svg" alt="icon-next" />
+        </div>
+        <div class="swiper-btn-prev" id="main-slider-prev">
+          <img src="./images/icon-previous.svg" alt="icon-previous" />
+        </div>
+        <div
+          thumbsSlider=""
+          class="swiper thumbs-slider"
+          id="main-thumbs-slider"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" loading="auto"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail" loading="auto"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail" loading="auto"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail" loading="auto"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h4>SNEAKER COMPANY</h4>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ex
+          obcaecati fugit at ducimus, odio illum consectetur impedit maiores
+          explicabo commodi exercitationem nobis laboriosam? Et fuga laboriosam
+          commodi quisquam quod?
+        </p>
+        <div class="price-info">
+          <div class="current-price">
+            <span class="price" id="current-price">$125.00</span>
+            <span class="discount" id="discount">50%</span>
+          </div>
+          <div class="old-price" id="old-price">$250.00</div>
+        </div>
+        <div class="order-product">
+          <div class="order-qty">
+            <button id="order-qty-minus" title="order min">
+              <img src="./images/icon-minus.svg" alt="icon-minus"/>
+            </button>
+            <input type="text" value="1" id="order-qty-value" />
+            <button id="order-qty-plus" title="order plus">
+              <img src="./images/icon-plus.svg" alt="icon-plus"/>
+            </button>
+          </div>
+          <button class="add-to-cart" id="add-to-cart" alt="add cart" title="add cart">
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                class="cart"
+                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                fill-rule="nonzero"
+              />
+            </svg>
+            <span>Add to cart</span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <div class="lightbox" id="lightbox">
+      <div class="swiper-container">
+        <div class="swiper main-slider" id="lightbox-main-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/image-product-1.jpg" alt="image-product-1" loading="auto" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-2.jpg" alt="image-product-2" loading="auto" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-3.jpg" alt="image-product-3" loading="auto" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-4.jpg" alt="image-product-4" loading="auto" />
+            </div>
+          </div>
+
+          <div class="swiper-btn-next" id="lightbox-next">
+            <img src="./images/icon-next.svg" alt="icon-next" />
+          </div>
+          <div class="swiper-btn-prev" id="lightbox-prev">
+            <img src="./images/icon-previous.svg" alt="icon-previous"/>
+          </div>
+        </div>
+        <button id="lightbox-close-btn" title="Close Lightbox" title="close lightbox">
+          <img src="./images/icon-close.svg" alt="lightbox-close" />
+        </button>
+
+        <div
+          thumbsSlider=""
+          class="swiper thumbs-slider"
+          id="lightbox-thumbs-slider"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" loading="auto"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail" loading="auto"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail" loading="auto"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail" loading="auto"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>

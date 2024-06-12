@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+// Imports
+@import "reset";
+@import "colors";
+@import "header";
+@import "mobile-menu";
+@import "main";
+@import "lightbox";
+
+.container {
+  width: 85vw;
+  margin: 0 auto;
+  @media (min-width: 1000px) {
+    width: 70vw;
+  }
+}
